@@ -1,0 +1,101 @@
+/* Style the header */
+.header {
+    grid-area: header;
+    background-color: azure;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+}
+
+/* The grid container */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header header header header'
+        'nav nav nav nav nav nav'
+        'left middle middle middle middle right2'
+        'footer footer footer footer footer footer';
+    /* grid-column-gap: 10px; - if you want gap between the columns */
+}
+
+.left,
+.middle,
+.right2 {
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.nav {
+    grid-area: nav;
+    background-color: skyblue;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    transition: width 3s, height 3s;
+}
+/* Style the left column */
+    .nav a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        transition: background-color 1s, color 0.5s;
+    }
+
+.nav a:hover {
+        background-color: aliceblue;
+        color: black;
+
+    }
+.navbar a.active {
+    background-color: skyblue;
+    color: white;
+}
+
+/* Style the middle column */
+.middle {
+    grid-area: middle;
+    text-align: center;
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Style the right column */
+.right2 {
+    grid-area: right;
+}
+
+/* Style the footer */
+.footer {
+    grid-area: footer;
+    background-color: azure;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-areas:
+            'header header header header header header'
+            'nav nav nav nav nav nav'
+            'left left left left left left'
+            'middle middle middle middle middle middle'
+            'right right right right right right'
+            'footer footer footer footer footer footer';
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
