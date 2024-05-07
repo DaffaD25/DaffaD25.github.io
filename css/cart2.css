@@ -1,0 +1,362 @@
+﻿.header {
+    grid-area: header;
+    background-color: black;
+    padding: 3px;
+    text-align: left;
+    font-size: 12px;
+    position: relative;
+    font-family: barlow condensed, sans-serif;
+    font-weight: normal;
+    color: white;
+}
+
+h2 {
+    grid-area: header;
+    padding: 3px;
+    text-align: left;
+    left: 150px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    position: relative;
+    font-family: barlow condensed, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+h3 {
+    margin-top: 50px;
+}
+
+ol {
+    float: left;
+    color: white;
+}
+
+    ol li {
+        margin-top: -10px;
+        float: left;
+        position: relative;
+        top: 10px;
+        left: 290%;
+        width: 100px;
+        font-size: 14px;
+        font-family: barlow condensed, sans-serif;
+        list-style-type: none;
+    }
+
+        ol li a {
+            text-decoration: none;
+            color: white;
+        }
+
+ul li a:hover {
+    cursor: pointer;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: barlow condensed, sans-serif;
+}
+/* The grid container */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header header header header'
+        'nav nav nav nav nav nav'
+        'cover cover cover cover cover cover'
+        'middle middle middle middle middle middle'
+        'middle2 middle2 middle2 middle2 middle2 middle2'
+        'footer footer footer footer footer footer';
+    /* grid-column-gap: 10px; - if you want gap between the columns */
+}
+
+.nav {
+    grid-area: nav;
+    background-color: black;
+    background: black;
+    padding: 5px;
+    text-align: center;
+    overflow: hidden;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+    /* Style the left column */
+    .nav a {
+        float: inherit;
+        display: inline-grid;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+    }
+
+        .nav a:hover {
+            border-left: 2px solid #bb0a1e;
+            border-right: 2px solid #bb0a1e;
+        }
+
+    .nav input[type=text] {
+        padding: 6px;
+        border: none;
+        margin-top: 8px;
+        margin-left: 10px;
+        margin-right: 70px;
+        font-size: 16px;
+    }
+
+.previous {
+    background-color: black;
+    color: white;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.fa-search {
+    position: absolute;
+    left: 65%;
+    top: 3px;
+    color: white;
+    width: 25px;
+    height: -30px;
+}
+
+    .fa-search:hover {
+        cursor: pointer;
+    }
+
+.fa-cart-plus {
+    position: absolute;
+    left: 94%;
+    top: 3px;
+    color: white;
+    width: 25px;
+    height: -30px;
+}
+
+    .fa-cart-plus:hover {
+        cursor: pointer;
+    }
+
+/* Style the middle column */
+.middle2 {
+    grid-area: middle;
+    text-align: center;
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: white;
+    padding: 20px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    font-size: 50px;
+}
+
+ul.head {
+    grid-area: cover;
+    background-color: white;
+    padding: 3px;
+    text-align: left;
+    font-size: 12px;
+    position: relative;
+    font-family: barlow condensed, sans-serif;
+    font-weight: normal;
+    color: white;
+    border-bottom: 2px solid black;
+}
+
+    ul.head li.menu {
+        display: inline-grid;
+        justify-content: center;
+        float: inherit;
+        color: black;
+        text-align: center;
+        padding: 14px 20px;
+        text-align: center;
+        text-decoration: none;
+        margin-left: 200px;
+    }
+
+.cart .table {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #fff;
+}
+
+    .cart .table thead tr th {
+        border-top: 0px;
+        font-size: 16px;
+        font-weight: bold;
+        border-bottom: 0px;
+    }
+
+    .cart .table thead tr td {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        vertical-align: middle;
+        align-self: center;
+    }
+
+    .cart .table tbody tr td .main .d-flex {
+        padding-right: 30px;
+    }
+
+        .cart .table tbody tr td .main .d-flex img {
+            border: 2px solid #000;
+            border-radius: 3px;
+        }
+
+    .cart .table tbody tr td .main .des {
+        vertical-align: middle;
+        align-self: center;
+    }
+
+        .cart .table tbody tr td .main .des p {
+            margin-bottom: 0px;
+        }
+
+    .cart .table tbody tr td {
+        font-size: 16px;
+        color: #000;
+        margin-bottom: 0px;
+    }
+
+        .cart .table tbody tr td .counter {
+            margin-bottom: 0px;
+        }
+
+.price1 {
+    font-size: 24px;
+    float: right;
+    position: relative;
+    right: 190px;
+    top: 90px;
+}
+
+.product img {
+    width: 100px;
+    height: 100px;
+    grid-area: middle;
+    float: left;
+    position: relative;
+    bottom: 310px;
+    left: 40px;
+    border: 3px solid black;
+}
+
+.price2 {
+    font-size: 16px;
+    float: left;
+    position: relative;
+    left: 320px;
+    top: 90px;
+}
+
+.des {
+    font-size: 16px;
+    float: left;
+    position: relative;
+    left: 205px;
+    top: 80px;
+}
+
+.counter {
+    grid-area: middle;
+    float: right;
+    margin-right: 320px;
+    top: 80px;
+    position: relative;
+}
+
+    .counter i {
+        border: 1px solid #000;
+        padding: 7px;
+        display: inline-block;
+        position: relative;
+    }
+
+.cart .table tbody tr td .counter input {
+    width: 100px;
+    padding-left: 30px;
+    height: 40px;
+    outline: none;
+    box-shadow: none;
+}
+
+.checkout ul {
+    border: 2px solid #ebebeb;
+    background: #f3f3f3;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 16px;
+    padding-bottom: 20px;
+}
+
+.checkout {
+    margin-top: 200px;
+}
+
+    .checkout ul li {
+        list-style: none;
+        font-size: 16px;
+        font-weight: bold;
+        color: #252525;
+        text-transform: uppercase;
+        overflow: hidden;
+    }
+
+        .checkout ul li.subtotal {
+            font-weight: bold;
+            text-transform: capitalize;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 14px;
+        }
+
+            .checkout ul li.subtotal span {
+                font-weight: bold;
+            }
+
+        .checkout ul li.cart-total {
+            padding-top: 10px
+        }
+
+            .checkout ul li.cart-total span {
+                color: #bb0a1e;
+            }
+
+        .checkout ul li span {
+            float: right;
+        }
+
+    .checkout .proceed-btn {
+        font-size: 15px;
+        font-weight: bold;
+        color: #fff;
+        background: #252525;
+        text-transform: uppercase;
+        padding: 15px 25px 14px 25px;
+        display: block;
+        text-align: center;
+    }
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-areas:
+            'header header header header header header'
+            'nav nav nav nav nav nav'
+            'left left left left left left'
+            'middle middle middle middle middle middle'
+            'middle2 middle2 middle2 middle2 middle2 middle2'
+            'right right right right right right'
+            'footer footer footer footer footer footer';
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}

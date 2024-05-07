@@ -1,6 +1,4 @@
-﻿
-/* Style the header */
-.header {
+﻿.header {
     grid-area: header;
     background-color: black;
     padding: 3px;
@@ -24,6 +22,11 @@ h2 {
     font-weight: bold;
     color: white;
 }
+
+h3 {
+    margin-top: 50px;
+}
+
 ul {
     float: left;
     color: white;
@@ -55,8 +58,8 @@ ul {
     padding: 0;
     font-family: barlow condensed, sans-serif;
 }
-    /* The grid container */
-    .grid-container {
+/* The grid container */
+.grid-container {
     display: grid;
     grid-template-areas:
         'header header header header header header'
@@ -76,8 +79,10 @@ ul {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
+    left: 0;
+    width: 100%;
 }
-/* Style the left column */
+    /* Style the left column */
     .nav a {
         float: inherit;
         display: inline-grid;
@@ -102,11 +107,10 @@ ul {
 .fa-search {
     position: absolute;
     left: 65%;
-    top: 22px;
+    top: 3px;
     color: white;
     width: 25px;
     height: -30px;
-
 }
 
     .fa-search:hover {
@@ -116,7 +120,7 @@ ul {
 .fa-cart-plus {
     position: absolute;
     left: 94%;
-    top: 22px;
+    top: 3px;
     color: white;
     width: 25px;
     height: -30px;
@@ -125,16 +129,6 @@ ul {
     .fa-cart-plus:hover {
         cursor: pointer;
     }
-
-.cover img {
-    grid-area: cover;
-    width: 1280px;
-    height: auto;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 /* Style the middle column */
 .middle {
@@ -211,11 +205,11 @@ ul {
 
 .product-title {
     font-size: 1.5rem;
-    margin-left:-310px;
+    margin-left: -310px;
     text-align: center;
     margin-bottom: 10px;
     color: black;
-    letter-spacing:-1px
+    letter-spacing: -1px
 }
 
 .product-details.expand {
